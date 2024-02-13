@@ -1,0 +1,31 @@
+.TodoItem {
+    display: flex;
+    align-items: center;
+    width: 327px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: #FAFAFA;
+    box-shadow: 0px 5px 50px 0px rgba(32, 35, 41, 0.15);
+    margin: 24px 0px;
+    
+}
+
+.TodoItemLeft {
+    width: 20%;
+}
+
+.TodoItemRight {
+    width: 80%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.ClosingEquis {
+    position:absolute;
+    margin-top: -90px;
+    margin-left: 230px
+
+    
+    
+}
