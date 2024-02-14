@@ -32,7 +32,15 @@ function App() {
     }
   )
 
-  console.log(searchValue);
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+     const todoIndex = newTodos.findIndex(
+      todo => todo.text == text
+     );
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos);
+  }
+
   return (
     <> {/* Esto es un React.fragment pero simplificado, 
           evita que se necesite importar React para que funcione. */}
@@ -54,6 +62,7 @@ function App() {
               key={todo.text}
               text={todo.text}
               completed={todo.completed}
+              onComplete={() => completeTodo(todo.text)}
               />
               )
             })}        
