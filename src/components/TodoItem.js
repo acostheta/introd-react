@@ -3,19 +3,19 @@ import './TodoItem.css'
 import check from '../assets/Check.png'
 import equis from '../assets/X.png'
 
-function TodoItem({text, completed}) {
+function TodoItem(props) {
   return (
-    <li>
-    <div className="TodoItem">
-      <div className="TodoItemLeft">
-        <img src={check} alt="" className="TodoStatus"/>
-      </div>
-      <div className="TodoItemRight">
-        <p className="TodoItemText">{text}{completed}</p>
-        <img className="ClosingEquis" src={equis} alt="" />
-      </div>
-  </div>
+        <li className="TodoItem">
+      <span className={`Icon Icon-check ${props.completed && "Icon-check--active"}` }> </span>
+        <div className="TodoItemLeft">
+          <img src={check} alt="" className="TodoStatus"/>
+        </div>
+        <div className="TodoItemRight">
+          <p className="TodoItemText">{props.text}{props.completed}</p>
+          <img className="ClosingEquis" src={equis} alt="" />
+        </div>
     </li>
+    
   )
 }
 
